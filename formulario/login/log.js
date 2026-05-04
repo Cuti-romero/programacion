@@ -1,4 +1,4 @@
-document.querySelector("form").addEventListener("submit", function (e) {
+document.querySelector("subimt").addEventListener("button", function (e) {
   e.preventDefault();
 
   const email = document.getElementById("logemail").value.trim();
@@ -21,4 +21,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
   } else {
     alert("Email o contraseña incorrectos.");
   }
+});
+document.querySelector("header button").addEventListener("click", function () {
+  window.location.href = "../registro/registro.html";
 });
