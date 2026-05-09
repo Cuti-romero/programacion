@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./rec.css">
+    <link rel="shortcut icon" href="../login/img/3cffc09610e8c50bd0abcf06558bae74-removebg-preview.png" type="image/x-icon">
+    <title>Recuperar contraseña</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section>
+            <div class="card">
+              <form class="form" id="form-olvide">
+            
+                <div class="title">Recuperar Contraseña</div>
+            
+                <p class="verify-sub">Ingresá tu Gmail y te mostraremos el código de verificación</p>
+            
+                <label class="label_input" for="recovery-email">Gmail</label>
+                <input
+                  spellcheck="false"
+                  class="input"
+                  type="email"
+                  id="recovery-email"
+                  placeholder="hola@gmail.com" />
+            
+                <span class="error" id="recovery-error"></span>
+            
+                <button class="submit" type="submit">Continuar</button>
+            
+                <p class="verify-resend">
+                  <a href="../login/login.html">← Volver al inicio de sesión</a>
+                </p>            
+              </form>
+            </div>
+        </section>
+    </main>
+    <footer>contacto</footer>
+</body>
+<script src="../recuperacion/rec.js"></script>
+</html>

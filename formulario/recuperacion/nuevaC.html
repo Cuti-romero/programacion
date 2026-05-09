@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./rec.css">
+    <link rel="shortcut icon" href="../login/img/3cffc09610e8c50bd0abcf06558bae74-removebg-preview.png" type="image/x-icon">
+    <title>Crear contraseña nueva</title>
+</head>
+<body>
+  <header></header>
+  <main>
+    <section>
+      <div class="card">
+        <form class="form" id="form-nueva">
+      
+          <div class="title">Nueva Contraseña</div>
+      
+          <label class="label_input" for="codigo-input">Código de verificación</label>
+          <div class="codigo-grid">
+            <input class="codigo-input" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]" id="c0" />
+            <input class="codigo-input" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]" id="c1" />
+            <input class="codigo-input" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]" id="c2" />
+            <input class="codigo-input" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]" id="c3" />
+          </div>            
+          <span class="error" id="verify-error"></span>
+      
+          <label class="label_input" for="nueva-pass">Nueva contraseña</label>
+          <div class="input-wrap">
+            <input
+              spellcheck="false"
+              class="input"
+              type="password"
+              id="nueva-pass"
+              placeholder="••••••••" />
+            <button type="button" class="btn-eye" id="eye-nueva">
+              <svg id="icon-nueva" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+      
+          <label class="label_input" for="confirmar-pass">Confirmar contraseña</label>
+          <div class="input-wrap">
+            <input
+              spellcheck="false"
+              class="input"
+              type="password"
+              id="confirmar-pass"
+              placeholder="••••••••" />
+            <button type="button" class="btn-eye" id="eye-confirmar">
+              <svg id="icon-confirmar" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+          <span class="error" id="nueva-error"></span>
+      
+          <button class="submit" type="submit">Cambiar contraseña</button>
+      
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>contacto</footer>
+</body>
+<script src="../recuperacion/nueva.js"></script>
+</html>

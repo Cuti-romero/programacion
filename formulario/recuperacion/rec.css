@@ -21,13 +21,12 @@ section{
     justify-content: center;
 } 
 header{
-    background-color: #2B3137;
+    background-color:#233240;
     text-align: center;
     padding: 1em;
-}
-h1{
-    font-family: 'nort', sans-serif;
-    color: #e5dfd8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 footer{
     padding: 0.6em;
@@ -37,16 +36,9 @@ footer{
     flex-direction: row;
     justify-content: space-around;
 }
-.bi{
-  color: #E5E5E5;
-  transition: color 0.3s ease;
-}
-.bi:hover {
-  color: #B31225;
-}
 .card {
   --p: 32px;
-  --h-form: 300px;
+  --h-form: 550px;
   --w-form: 380px;
   --input-px: 0.75rem;
   --input-py: 0.65rem;
@@ -59,7 +51,7 @@ footer{
   border-radius: 16px;
   background: #1C1F26;
   position: absolute;
-  inset-block-start: 15%;
+  inset-block-start: 25%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -88,45 +80,39 @@ footer{
   border-bottom: 2px solid #900D1F;
   text-align: center;
 }
-.form .submit {
-  height: 2.5em;
-  width: 50%;
-  outline: none;
-  cursor: pointer;
-  background: linear-gradient(135deg, #6D0006 0%, #900D1F 100%);
-  border: 1px solid rgba(144, 13, 31, 0.4);
-  font-weight: 500;
-  letter-spacing: 0.25px;
-  color: #E5E5E5;
+.form .label_input {
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   font-size: 1rem;
-  text-align: center;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  -webkit-appearance: button;
-  appearance: button;
-  margin-left: 4.3em;
-  margin-top: 1em;
+  margin-top: 7rem;
+  color: #B0B0B8;
+  font-weight: 600;
+  display: inline;
+  text-align: left;
+  margin-right: auto;
+  /*position: relative;*/
+  z-index: 99;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.form .input {
+  resize: vertical;
+  background: #252830;
+  border: 1px solid #3A3D45;
+  border-radius: 6px;
+  outline: none;
+  padding: var(--input-py) var(--input-px);
+  font-size: 18px;
+  width: 90%;
+  color: #E5E5E5;
+  margin: var(--space-y) 0;
   transition: all 0.25s ease;
 }
-.verify-sub {
-  font-size: 0.9rem;
-  color: #80808A;
-  text-align: center;
-  margin: -0.5rem 0 1rem;
-  line-height: 1.5;
-}
-
 .codigo-grid {
   display: flex;
   gap: 14px;
   justify-content: center;
   margin: 0.5rem 0 0.25rem;
 }
-
 .codigo-input {
   width: 58px;
   height: 64px;
@@ -157,9 +143,8 @@ footer{
   border-color: #c0392b;
   box-shadow: 0 0 0 2px rgba(192, 57, 43, 0.3);
 }
-
 .error {
-  font-size: 0.82rem;
+  font-size: 1rem;
   color: #c0392b;
   text-align: center;
   min-height: 18px;
@@ -167,10 +152,10 @@ footer{
 }
 
 .verify-resend {
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: #80808A;
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 2rem;
 }
 
 .verify-resend a {
@@ -181,5 +166,69 @@ footer{
 }
 
 .verify-resend a:hover {
+  color: #E5E5E5;
+}
+.form .verify-sub{
+  text-align: center;
+  color: #E5E5E5;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.form .submit {
+  height: 3em;
+  width: 70%;
+  outline: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #6D0006 0%, #900D1F 100%);
+  border: 1px solid rgba(144, 13, 31, 0.4);
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  color: #E5E5E5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  -webkit-appearance: button;
+  appearance: button;
+  margin-left: 5em;
+  margin-block: 1em;
+  transition: all 0.25s ease;
+}
+.form .submit:hover {
+  background: linear-gradient(135deg, #900D1F 0%, #B31225 100%);
+  border: 1px solid rgba(179, 18, 37, 0.5);
+  box-shadow: 0 4px 15px rgba(144, 13, 31, 0.4);
+  color: #fff;
+}
+.input-wrap {
+  position: relative;
+  width: 80%;
+}
+
+.input-wrap .input {
+  width: 100%;
+  padding-right: 2.8rem;
+}
+
+.btn-eye {
+  position: absolute;
+  inset-inline-start: 110%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #80808A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.btn-eye:hover {
   color: #E5E5E5;
 }
